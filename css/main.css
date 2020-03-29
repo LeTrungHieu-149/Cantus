@@ -1,0 +1,257 @@
+/* header */
+.header {
+    min-height: 100vh;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    min-height: 10rem;
+    background-color: var(--primary-color);
+    align-items: center;
+    padding-right: 5rem;
+    padding-left: 5rem;
+    flex-wrap: wrap;
+}
+
+.menu__list {
+    display: flex;
+}
+
+.nav__right {
+    display: flex;
+}
+
+.social-share {
+    display: flex;
+}
+
+.social-share__item {
+    display: flex;
+    padding: 0 2.25rem;
+    align-items: center;
+}
+
+.menu__item {
+    padding-left: 1.8rem;
+    padding-right: 1.8rem;
+}
+
+.menu__link {
+    font-size: 1.3rem;
+    font-family: var(--droid);
+    font-weight: bold;
+    text-transform: uppercase;    
+    color: var(--white);
+}
+
+.menu__link:hover {
+    color: var(--secondary-color);
+}
+
+.social-share__item-number {
+    font-size: 1.4rem;
+    font-family: var(--opensan);
+    color: var(--white);
+    margin-left: 1.2rem; 
+}
+
+.btn {
+    text-transform: uppercase;
+    font-family: var(--droid);
+    font-size: 1.2rem;
+    border-radius: 999px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    height: 5rem;
+    display: block;
+}
+
+.btn--white {
+    color: var(--primary-color);
+    background-color: var(--white);
+}
+
+.btn--red {
+    color: var(--white);
+    background-color: var(--primary-color);
+}
+
+.btn--big {
+    width: 20rem;
+}
+
+.btn--medium {
+    width: 19rem;
+}
+
+.btn--small {
+    width: 16rem;
+}
+
+.btn--center {
+    margin: 0 auto;
+}
+
+.banner {
+    animation: changebg 24s infinite;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    padding-bottom: 20rem;
+}
+
+.banner__heading {
+    text-align: center;
+    padding-top:20rem;
+    padding-bottom:9rem;
+}
+
+.heading--oswald {
+    font-weight: 900;
+    font-family: var(--oswald);
+    text-transform: uppercase;
+}
+
+.heading--greatvibe {
+    font-family: var(--greatvibes);
+    text-transform: capitalize;
+}
+
+.banner__heading-top {
+    font-size: 11.6rem;
+    color: var(--primary-color);
+}
+
+.banner__heading-bottom {
+    font-size: 8rem;
+    color: var(--secondary-color);
+}
+
+@keyframes changebg {
+    0% {
+        background-image: url('../images/header-bg-1.jpg');
+    }
+    33.33% {
+        background-image: url('../images/header-bg-1.jpg');
+    }
+
+    33.34% {
+        background-image: url('../images/header-bg-2.jpg');
+    }
+
+    66.66% {
+        background-image: url('../images/header-bg-2.jpg');
+    }
+
+    66.67% {
+        background-image: url('../images/header-bg-3.jpg');
+    }
+
+    100% {
+        background-image: url('../images/header-bg-3.jpg');
+    }
+}
+
+/* introducing */ 
+.introducing {
+    padding: 10rem 0;
+}
+
+.introducing__container {
+    position: relative;
+}
+
+.introducing__heading-top {
+    color: var(--secondary-color);
+    font-size:3.2rem;
+    
+}
+
+.introducing__heading-bottom {
+    color: var(--primary-color);
+    font-size:3.2rem;
+}
+
+.move {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 1rem;
+}
+
+.prev, .next {
+    width: 3.5rem;
+    height: 3.5rem;
+    color: var(--white);
+    background-color: var(--primary-color);
+    font-size: 3rem;
+    line-height: 3.5rem;
+    text-align: center;
+    margin: 0.25rem;
+}
+
+.singer-block {
+    display: flex;
+    justify-content: space-between;
+}
+
+.singer {
+    width: 31.67%;
+    height: 47rem;
+    position: relative;
+}
+
+.singer:first-child {
+    background-image: url('../images/singer-1.jpg');
+}
+
+.singer:nth-child(2) {
+    background-image: url('../images/singer-2.jpg');
+}
+
+.singer:last-child {
+    background-image: url('../images/singer-3.jpg');
+}
+
+.singer__info {
+    width: 100%;
+    background-color: var(--primary-color);
+    padding-left:2.5rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    position: absolute;
+    bottom: 0;
+}
+
+.singer__info-name {
+    color: var(--white);
+    font-size: 2.2rem;
+    text-transform: capitalize;
+    font-family: var(--oswald);
+    margin-bottom: 0.7rem;
+}
+
+.singer__info-role {
+    color: var(--white);
+    font-size: 1.6rem;
+    text-transform: capitalize;
+    font-family: var(--droid);
+    margin-bottom: 2rem;
+}
+
+.singer__social {
+    padding-left:0;
+}
+
+.singer__social-number {
+    font-size: 1.4rem;
+}
+
+.singer__info-social {
+    display: none;
+}
+
+.singer:hover .singer__info-social {
+    display: block;
+}
