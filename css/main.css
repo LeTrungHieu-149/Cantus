@@ -100,6 +100,7 @@
     background-position: center center;
     background-size: cover;
     padding-bottom: 20rem;
+    background-attachment: fixed;
 }
 
 .banner__heading {
@@ -159,17 +160,12 @@
     padding: 10rem 0;
 }
 
-.introducing__container {
-    position: relative;
-}
-
-.introducing__heading-top {
+.section__heading-top {
     color: var(--secondary-color);
     font-size:3.2rem;
-    
 }
 
-.introducing__heading-bottom {
+.section__heading-bottom {
     color: var(--primary-color);
     font-size:3.2rem;
 }
@@ -188,7 +184,7 @@
     font-size: 3rem;
     line-height: 3.5rem;
     text-align: center;
-    margin: 0.25rem;
+    margin-left: 0.25rem;
 }
 
 .singer-block {
@@ -200,6 +196,9 @@
     width: 31.67%;
     height: 47rem;
     position: relative;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .singer:first-child {
@@ -215,13 +214,14 @@
 }
 
 .singer__info {
-    width: 100%;
     background-color: var(--primary-color);
     padding-left:2.5rem;
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
     position: absolute;
     bottom: 0;
+    left:0;
+    right: 0;
 }
 
 .singer__info-name {
@@ -254,4 +254,414 @@
 
 .singer:hover .singer__info-social {
     display: block;
+}
+
+/* upcoming-and-latest */
+
+.upcoming-and-latest {
+    padding:10rem 0;
+}
+
+.upcoming-and-latest__container {
+    display: flex;
+}
+
+.upcoming {
+    width:66.66%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.latest {
+    width:33.34%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.upcoming__content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 72.5%;
+}
+
+.upcoming__image{
+    width: 33.75%;
+    height: 100%;
+    position: relative;
+}
+
+.upcoming__image img {
+    height: 100%;
+    width: 100%;
+}
+
+.upcoming__date {
+    font-size: 4.5rem;
+    color: var(--white);
+    font-family: var(--oswald);
+    font-weight: 900;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index:1;
+    width: 26%;
+    text-align: center;
+}
+
+.upcoming__info {
+    width: 66.25%;
+    color: var(--secondary-color);
+    margin-left: 9.375%;
+}
+
+.upcoming__info-heading {
+    font-size: 2.2rem;
+    font-family: var(--oswald);
+    margin-bottom:3rem;
+}
+
+.upcoming__info-location, .upcoming__info-price, .upcoming__info-date, .upcoming__info-time {
+    font-size: 1.6rem;
+    font-family: var(--droid);
+    line-height: 3rem;
+}
+
+.upcoming__button {
+    margin-top: 2rem;
+    margin-bottom: 0;
+}
+
+.latest__video {
+    height: 72.5%;
+    position: relative;
+}
+
+.latest__img {
+    height: 100%;
+    width: 100%;
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    z-index:2;
+    background-color: var(--primary-color);
+    text-align: center;
+    color: var(--white);
+    cursor: pointer;
+}
+
+.play-icon {
+    font-size: 2rem;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+/* founder */
+
+.founder__container {
+    background-image: url('../images/old-man.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: var(--white);
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+}
+
+.founder__content {
+    max-width: 57rem;
+    margin-left:10rem;
+}
+
+.founder__heading {
+    font-size: 3.2rem;
+    font-family: var(--oswald);
+    text-transform: uppercase;
+}
+
+.founder__desc {
+    font-size: 2.2rem;
+    font-family: var(--droid);
+    margin-bottom: 4.5rem;
+}
+
+/* popular and insta */
+
+.popular-and-insta {
+    padding:10rem 0;
+}
+
+.popular-and-insta__container {
+    display: flex;
+}
+
+.popular {
+    width:66.66%;
+    display: flex;
+    flex-direction: column;
+}
+
+.popular__heading, .insta__heading {
+    margin-bottom: 3rem;
+}
+
+.insta {
+    width:33.34%;
+}
+
+.music-player {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8rem;
+}
+
+.music-player__image {
+    width: 15%;
+}
+
+.music-player__bar {
+    width: 83%;
+    display: flex;
+    flex-direction: column;
+    padding-right:3%;
+}
+
+.music-player__top {
+    width: 100%;
+    display: flex;
+    font-family: var(--droid);
+}
+
+.music-player__play {
+    width: 5%;
+    cursor: pointer;
+}
+
+.music-player__info {
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.music-player__info-left {
+    margin-left: 0.5rem;
+}
+
+.music-player__uploader {
+    color: var(--gray);
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.music-player__song-name {
+    color: var(--secondary-color);
+    font-size: 1.6rem;
+}
+
+.music-player__uploaded-time {
+    color: var(--gray);
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.music-player__hashtag {
+    color: var(--white);
+    background-color: var(--gray);
+    padding:0.3rem;
+    border-radius: 5px;
+}
+
+.music-player__scrub {
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.music-player__button-and-stat {
+    display: flex;
+    margin-top: 1rem;
+    justify-content: space-between;
+}
+
+.music-player__button {
+    display: flex;
+}
+
+.music-player__button-item {
+    display: flex;
+    font-size: 1.1rem;
+    font-family: var(--droid);
+    color: var(--secondary-color);
+    margin-right: 0.5rem;
+    padding: 0.5rem 0.7rem;
+    border: 0.5px var(--gray) solid;
+    border-radius: 0.5rem;
+}
+
+.music-player__stat {
+    display: flex;
+}
+
+.music-player__stat-item {
+    display: flex;
+    font-size: 1.1rem;
+    font-family: var(--droid);
+    color: var(--secondary-color);
+    padding: 0.5rem 0.7rem;
+}
+
+.music-player__stat-item-wrap:not(:first-child) {
+    border-left: 1px var(--gray) solid;
+}
+
+.music-player__stat-text {
+    padding-left: 0.3rem;
+}
+
+.music-player__button-text {
+    padding-left: 0.3rem;
+}
+
+.playlist {
+    display: flex;
+    justify-content: space-between;
+}
+
+.playlist__block {
+    padding-right: 5rem;
+}
+
+.playlist__song-name {
+    font-family: var(--droid);
+    font-size: 1.6rem;
+    color: vaR(--secondary-color);
+    line-height: 3.6rem;
+    padding-right: 3rem;
+    cursor: pointer;
+}
+
+.playlist__song-name:not(:last-child) {
+    border-bottom: 0.5px var(--gray) solid;
+}
+
+.insta__block-image {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+.insta__image {
+    width: 45.95%;
+}
+
+.insta__image img {
+    width: 100%;
+}
+
+.insta__image:first-child, .insta__image:nth-child(2) {
+    margin-bottom: 8.11%;
+}
+
+/* download */
+
+.download__container {
+    background-image: url('../images/bottom-bg.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    color: var(--white);
+    text-align: center;
+    padding: 7rem 0 12rem;
+}
+.download__heading {
+    font-family: var(--oswald);
+    font-size: 3.2rem;
+}
+
+.download__desc {
+    font-family: var(--droid);
+    font-size: 2.2rem;
+    margin-top: 1rem;
+    margin-bottom: 4.5rem;
+}
+
+.download__button-block {
+    display: flex;
+    max-width: 34rem;
+    margin: 0 auto;
+}
+
+.download__button {
+    padding: 0 0.8rem;
+}
+
+/*footer*/
+
+.footer__container {
+    padding-top: 10rem;
+    padding-bottom: 7rem;
+}
+
+.footer__form {
+    text-align: center;
+    padding-bottom: 10rem;
+}
+
+.footer__input {
+    width: 45%;
+    border: 0;
+    outline: 0;
+    border-bottom: 5px var(--gray) solid;
+    background-image: url('../images/arrow-icon.png');
+    background-repeat: no-repeat;
+    background-position: center right;
+    font-size: 1.6rem;
+    font-family: var(--droid);
+    line-height: 4.6rem;
+    color: var(--secondary-color);
+}
+
+.footer__bottom {
+    text-align: center;
+    font-family: var(--droid);
+    border-top: 0.5px var(--gray) solid;
+    padding-top: 6rem;
+}
+
+.footer__nav {
+    padding-bottom: 3rem;
+}
+.footer-menu__list {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-menu__item {
+    padding: 0 3rem;
+}
+
+.footer-menu__link:hover {
+    color: var(--primary-color);
+}
+.footer-menu__link {
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    color: var(--secondary-color);
+}
+
+.footer__copyright {
+    color: var(--secondary-color);
+    font-size: 1.3rem;
 }
