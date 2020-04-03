@@ -19,7 +19,10 @@
   <div class="wrapper">
     <header class="header">
       <nav class="nav">
-        <div class="menu">
+        <div class="menu" id="menu">
+          <div class="menu-close">
+            <i class="far fa-window-close" onclick="closeNav()"></i>
+          </div>
           <ul class="menu__list">
             <li class="menu__item"><a href="" class="menu__link">Events</a></li>
             <li class="menu__item"><a href="" class="menu__link">Gallery</a></li>
@@ -32,28 +35,60 @@
           <a href="index.html"><img src="images/logo.png" alt=""></a>
         </div>
         <div class="nav__right">
-          <div class="social-share">
+          <div class="social-toggle" onclick="toggleSocial()">
+            <i class="fas fa-share-alt"></i>
+            <div class="social-share nav__social-share-mobile" id="social-mobile">
+              <div class="social-share__item">
+                <a href="#">
+                  <img src="images/facebook-icon.png" alt="" class="social-share__item-img">
+                </a>
+                <p class="social-share__item-number">32K</p>
+              </div>
+              <div class="social-share__item">
+                <a href="#">
+                  <img src="images/tweet-icon.png" alt="" class="social-share__item-img">
+                </a>
+                <p class="social-share__item-number">55K</p>
+              </div>
+              <div class="social-share__item">
+                <a href="#">
+                  <img src="images/google-icon.png" alt="" class="social-share__item-img">
+                </a>
+                <p class="social-share__item-number">23K</p>
+              </div>
+            </div>
+          </div>
+          <div class="menu-toggle" onclick="openNav()">
+            <i class="fas fa-bars"></i>
+          </div>
+          <div class="social-share nav__social-share">
             <div class="social-share__item">
-              <img src="images/facebook-icon.png" alt="" class="social-share__item-img">
+              <a href="#">
+                <img src="images/facebook-icon.png" alt="" class="social-share__item-img">
+              </a>
               <p class="social-share__item-number">32K</p>
             </div>
             <div class="social-share__item">
-              <img src="images/tweet-icon.png" alt="" class="social-share__item-img">
+              <a href="#">
+                <img src="images/tweet-icon.png" alt="" class="social-share__item-img">
+              </a>
               <p class="social-share__item-number">55K</p>
             </div>
             <div class="social-share__item">
-              <img src="images/google-icon.png" alt="" class="social-share__item-img">
+              <a href="#">
+                <img src="images/google-icon.png" alt="" class="social-share__item-img">
+              </a>
               <p class="social-share__item-number">23K</p>
             </div>
           </div>
-          <button class="btn btn--white btn--big">Purchase ticket</button>
+          <button class="btn btn--white btn--big nav__button">Purchase ticket</button>
         </div>
       </nav>
-      <div class="banner">
-        <h2 class="banner__heading">
-          <span class="banner__heading-top heading--oswald">Let's rock</span>
+      <div class="header__content">
+        <h2 class="header__heading">
+          <span class="header__heading-top heading--oswald">Let's rock</span>
           <br>
-          <span class="banner__heading-bottom heading--greatvibe">with cantus</span>
+          <span class="header__heading-bottom heading--greatvibe">with cantus</span>
         </h2>
         <button class="btn btn--big btn--red btn--center">discover more</button>
       </div>
@@ -75,7 +110,7 @@
               <p class="singer__info-name">john smith</p>
               <p class="singer__info-role">vocal</p>
               <div class="singer__info-social">
-                <div class="social-share">
+                <div class="social-share singer__social-share">
                   <div class="social-share__item singer__social">
                     <img src="images/facebook-icon.png" alt="" class="social-share__item-img singer__social-img">
                     <p class="social-share__item-number singer__social-number">96K</p>
@@ -97,7 +132,7 @@
               <p class="singer__info-name">rendi outhor</p>
               <p class="singer__info-role">drum</p>
               <div class="singer__info-social">
-                <div class="social-share">
+                <div class="social-share singer__social-share">
                   <div class="social-share__item singer__social">
                     <img src="images/facebook-icon.png" alt="" class="social-share__item-img singer__social-img">
                     <p class="social-share__item-number singer__social-number">96K</p>
@@ -119,7 +154,7 @@
               <p class="singer__info-name">renes odim</p>
               <p class="singer__info-role">guiter</p>
               <div class="singer__info-social">
-                <div class="social-share">
+                <div class="social-share singer__social-share">
                   <div class="social-share__item singer__social">
                     <img src="images/facebook-icon.png" alt="" class="social-share__item-img singer__social-img">
                     <p class="social-share__item-number singer__social-number">96K</p>
@@ -187,7 +222,7 @@
           <h3 class="founder__heading">
             Our Founder staying in our hearts
           </h3>
-          <p class="founder__desc">1982 <span style="font-family: 'Great Vibes';font-size: 6.5rem">cantus </span>Start jurny and now it‘s top class Rock Band in the California.</p>
+          <p class="founder__desc">1982 <span class="special-word founder__special-word">cantus </span>Start jurny and now it‘s top class Rock Band in the California.</p>
           <button class="btn--white btn btn--small">learn more</button>
         </div>
       </div>
@@ -247,7 +282,10 @@
                     </a>
                   </div>
                 </div>
-                <div class="music-player__stat">
+                <div class="stat-toggle" onclick="toggleStat()">
+                  <i class="fas fa-chevron-circle-down"></i>
+                </div>
+                <div class="music-player__stat" id="music-player__stat">
                   <div class="music-player__play-number music-player__stat-item-wrap">
                     <a href="#" class="music-player__stat-item"><img src="images/stat-play.png" alt="">
                       <span class="music-player__stat-text">53,575</span>
@@ -273,24 +311,18 @@
             </div>
           </div>
           <div class="playlist">
-            <div class="playlist__block">
-              <p class="playlist__song-name">01. My heart is dancing</p>
-              <p class="playlist__song-name">02. Good day</p>
-              <p class="playlist__song-name">03. Life for rent</p>
-              <p class="playlist__song-name">04. Hello It’s me</p>
-            </div>
-            <div class="playlist__block">
-              <p class="playlist__song-name">05. My heart is dancing</p>
-              <p class="playlist__song-name">06. Good day</p>
-              <p class="playlist__song-name">07. Life for rent</p>
-              <p class="playlist__song-name">08. Hello It’s me</p>
-            </div>
-            <div class="playlist__block">
-              <p class="playlist__song-name">09. My heart is dancing</p>
-              <p class="playlist__song-name">10. Good day</p>
-              <p class="playlist__song-name">11. Life for rent</p>
-              <p class="playlist__song-name">12. Hello It’s me</p>
-            </div>
+            <p class="playlist__song-name">01. My heart is dancing</p>
+            <p class="playlist__song-name">02. Good day</p>
+            <p class="playlist__song-name">03. Life for rent</p>
+            <p class="playlist__song-name">04. Hello It’s me</p>
+            <p class="playlist__song-name">05. My heart is dancing</p>
+            <p class="playlist__song-name">06. Good day</p>
+            <p class="playlist__song-name">07. Life for rent</p>
+            <p class="playlist__song-name">08. Hello It’s me</p>
+            <p class="playlist__song-name">09. My heart is dancing</p>
+            <p class="playlist__song-name">10. Good day</p>
+            <p class="playlist__song-name">11. Life for rent</p>
+            <p class="playlist__song-name">12. Hello It’s me</p>
           </div>
         </div>
         <div class="insta">
@@ -348,7 +380,7 @@
               </ul>
             </div>
           </nav>
-          <p class="footer__copyright">Copyright © 2009–2016 <span style="font-family: 'Great Vibes'; color: var(--primary-color); font-size: 2.8rem;">cantus </span>© their respective owners. Shipped from Salem, Mass. USA.</p>
+          <p class="footer__copyright">Copyright © 2009–2016 <span class="special-word footer__special-word">cantus </span>© their respective owners. Shipped from Salem, Mass. USA.</p>
         </div>
       </div>
     </footer>

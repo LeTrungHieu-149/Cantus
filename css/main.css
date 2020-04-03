@@ -1,9 +1,15 @@
 /* header */
 .header {
     min-height: 100vh;
+    animation: changebg 24s infinite;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 .nav {
+    position: relative;
     display: flex;
     justify-content: space-between;
     min-height: 10rem;
@@ -47,6 +53,18 @@
 
 .menu__link:hover {
     color: var(--secondary-color);
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.social-toggle {
+    display: none;
+}
+
+.menu-close {
+    display: none;
 }
 
 .social-share__item-number {
@@ -94,16 +112,11 @@
     margin: 0 auto;
 }
 
-.banner {
-    animation: changebg 24s infinite;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
+.header__content {
     padding-bottom: 20rem;
-    background-attachment: fixed;
 }
 
-.banner__heading {
+.header__heading {
     text-align: center;
     padding-top:20rem;
     padding-bottom:9rem;
@@ -120,12 +133,12 @@
     text-transform: capitalize;
 }
 
-.banner__heading-top {
+.header__heading-top {
     font-size: 11.6rem;
     color: var(--primary-color);
 }
 
-.banner__heading-bottom {
+.header__heading-bottom {
     font-size: 8rem;
     color: var(--secondary-color);
 }
@@ -155,6 +168,111 @@
     }
 }
 
+@media screen and (max-width: 1140px) {
+    .nav__button {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 940px) {
+    .nav__social-share{
+        display: none;
+    }
+
+    .social-toggle {
+        display: block;
+        width: 5rem;
+        height: 5rem;
+        font-size: 3rem;
+        line-height: 5rem;
+        color: var(--secondary-color);
+        cursor: pointer;
+        text-align: center;
+        position: relative;
+    }
+
+    .nav__social-share-mobile {
+        position: absolute;
+        flex-direction: column;
+        background-color: var(--primary-color);
+        width: 200%;
+        height: 0%;
+        top: 150%;
+        left: -50%;
+        overflow: hidden;
+        transition: height 0.25s;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .menu {
+        position: fixed;
+        background-color: var(--primary-color);
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 10;
+        height: 100%;
+        width: 0%;
+        overflow: hidden;
+        transition: width 0.5s;
+    }
+
+    .menu-close {
+        display: block;
+        width: 5rem;
+        height: 5rem;
+        position: absolute;
+        top:5rem;
+        right: 3rem;
+        font-size: 5rem;
+    }
+
+    .menu__list {
+        position: absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+    }
+
+    .menu__link {
+        color: var(--white);
+        font-size: 7vw;
+    }
+
+    .menu__item {
+        padding-bottom: 4rem;
+    }
+
+    .menu__list {
+        flex-direction: column;
+    }
+
+    .logo {
+        margin: 0 auto;
+    }
+
+    .menu-toggle {
+        position: absolute;
+        top: 25%;
+        right: 3rem;
+        display: block;
+        width: 5rem;
+        height: 5rem;
+        font-size: 4rem;
+        line-height: 5rem;
+        color: var(--secondary-color);
+        cursor: pointer;
+        text-align: center;
+    }
+
+    .social-toggle {
+        display: none;
+    }
+
+}
 /* introducing */ 
 .introducing {
     padding: 10rem 0;
@@ -254,6 +372,38 @@
 
 .singer:hover .singer__info-social {
     display: block;
+}
+
+@media screen and (max-width:992px) {
+    .singer-block {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .singer {
+        width: 45%;
+        margin: 0 1rem;
+    }
+
+    .singer:last-child {
+        margin-top: 2rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .singer {
+        width: 100%;
+        height: 80vh;
+    }
+
+    .singer {
+        margin: 0;
+    }
+
+    .singer:nth-child(2) {
+        margin-top: 2rem;
+    }
+
 }
 
 /* upcoming-and-latest */
@@ -368,7 +518,60 @@
     transform: translate(-50%,-50%);
 }
 
+@media screen and (max-width:992px) {
+    .upcoming-and-latest__container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .upcoming {
+        width: 100%;
+        margin-bottom: 5rem;
+    }
+
+    .latest {
+        width: 100%;
+    }
+
+    .upcoming__content {
+        margin-top:2rem;
+    }
+
+    .upcoming__image {
+        width: 50%;
+    }
+
+    .upcoming__info {
+        width: 50%;
+        margin-left: 4rem;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .upcoming__content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .upcoming__image {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .upcoming__info {
+        width: 100%;
+        margin-left: 1rem;
+    }
+}
+
 /* founder */
+.special-word {
+    font-family: var(--greatvibes);
+}
+
+.founder__special-word {
+    font-size: 6.5rem;
+}
 
 .founder__container {
     background-image: url('../images/old-man.jpg');
@@ -395,6 +598,24 @@
     font-size: 2.2rem;
     font-family: var(--droid);
     margin-bottom: 4.5rem;
+}
+
+@media screen and (max-width:768px) {
+    .founder__content {
+        margin-left: 2rem;
+    }
+
+    .founder__heading {
+        font-size: 5vw;
+    }
+
+    .founder__desc {
+        font-size: 3.5vw;
+    }
+
+    .founder__special-word {
+        font-size: 8vw;
+    }
 }
 
 /* popular and insta */
@@ -436,6 +657,7 @@
     display: flex;
     flex-direction: column;
     padding-right:3%;
+    position: relative;
 }
 
 .music-player__top {
@@ -513,6 +735,10 @@
     display: flex;
 }
 
+.stat-toggle {
+    display: none;
+}
+
 .music-player__stat-item {
     display: flex;
     font-size: 1.1rem;
@@ -534,24 +760,20 @@
 }
 
 .playlist {
-    display: flex;
-    justify-content: space-between;
-}
-
-.playlist__block {
-    padding-right: 5rem;
+    column-count: 3;
+    column-gap: 5rem;
+    padding-right: 3rem;
 }
 
 .playlist__song-name {
     font-family: var(--droid);
     font-size: 1.6rem;
-    color: vaR(--secondary-color);
+    color: var(--secondary-color);
     line-height: 3.6rem;
-    padding-right: 3rem;
     cursor: pointer;
 }
 
-.playlist__song-name:not(:last-child) {
+.playlist__song-name:not(:nth-child(4n)) {
     border-bottom: 0.5px var(--gray) solid;
 }
 
@@ -574,6 +796,98 @@
     margin-bottom: 8.11%;
 }
 
+@media screen and (max-width: 992px) {
+    .playlist {
+        column-gap: 2rem;
+    }
+}
+
+@media screen and (max-width:892px) {
+    .playlist {
+        column-count: 2;
+        column-gap: 4rem;
+    }
+
+    .playlist__song-name:not(:nth-child(20n)) {
+        border: none;
+    }
+
+    .playlist__song-name:not(:nth-child(6n)) {
+        border-bottom: 0.5px var(--gray) solid;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .popular-and-insta__container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .popular {
+        width: 100%;
+        margin-bottom: 3rem;
+    }
+
+    .insta {
+        width: 100%;
+    }
+
+    .music-player__bar {
+        padding-right: 0;
+    }
+
+    .playlist {
+        padding-right: 0;
+    }
+
+    .insta__block-image {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .insta__image {
+        width: 100%;
+    }
+
+    .insta__image:nth-child(3) {
+        margin-bottom: 8.11%;
+    }
+}
+
+@media screen and (max-width:590px) {
+    .music-player__stat {
+        display: block;
+        position: absolute;
+        right: 0;
+        top:100%;
+        height: 0;
+        overflow: hidden;
+        transition: height 0.5s;
+    }
+
+    .music-player__stat-item-wrap:not(:first-child) {
+        border: 0;
+    }
+
+    .stat-toggle {
+        display: block;
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 453px) {
+    .music-player__image {
+        display: none;
+    }
+
+    .music-player__bar {
+        width: 100%;
+    }
+
+    .playlist {
+        column-count: 1;
+    }
+}
 /* download */
 
 .download__container {
@@ -604,7 +918,17 @@
 }
 
 .download__button {
-    padding: 0 0.8rem;
+    margin: 0 0.8rem;
+}
+
+@media screen and (max-width:768px) {
+    .download__heading {
+        font-size: 5.5vw;
+    }
+
+    .download__desc {
+        font-size: 4vw;
+    }
 }
 
 /*footer*/
@@ -664,4 +988,23 @@
 .footer__copyright {
     color: var(--secondary-color);
     font-size: 1.3rem;
+}
+
+.footer__special-word {
+    font-size: 2.8rem;
+    color: var(--primary-color);
+}
+
+@media screen and (max-width: 768px) {
+    .footer__input {
+        width: 80%;
+    }
+
+    .footer-menu__list {
+        flex-wrap: wrap;
+    }
+
+    .footer-menu__item {
+        padding: 1rem 1rem;
+    }
 }
