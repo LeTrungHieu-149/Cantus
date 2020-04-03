@@ -17,6 +17,14 @@ function toggleSocial() {
 
 function toggleStat() {
     y++;
-    if(y%2!=0) document.getElementById("music-player__stat").style.height="100%";
-    else document.getElementById("music-player__stat").style.height="0%";
+    if(y%2!=0) 
+    {
+        document.getElementById("stat-toggle").style.transform="rotate(180deg)"
+        document.getElementById("music-player__stat").style.height="100%";
+    }
+    else 
+    {
+        document.getElementById("stat-toggle").style.transform="rotate(360deg)"
+        document.getElementById("music-player__stat").style.height="0%";
+    }
 }

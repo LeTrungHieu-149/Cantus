@@ -911,7 +911,11 @@
 
     .stat-toggle {
         display: block;
-        font-size: 1.5rem;
+        font-size: 2rem;
+        width: 2rem;
+        height: 2rem;
+        line-height: 2rem;
+        text-align: center;
     }
 }
 
