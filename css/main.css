@@ -2,10 +2,12 @@
 .header {
     min-height: 100vh;
     animation: changebg 24s infinite;
+    animation-delay: 12s; /* for loading image */
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
     background-attachment: fixed;
+    background-image: url('../images/header-bg-1.jpg');
 }
 
 .nav {
