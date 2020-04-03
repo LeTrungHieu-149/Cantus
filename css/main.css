@@ -847,7 +847,7 @@
     }
 
     .playlist__song-name:not(:nth-child(20n)) {
-        border: none;
+        border-bottom: none;
     }
 
     .playlist__song-name:not(:nth-child(6n)) {
@@ -924,6 +924,10 @@
 
     .playlist {
         column-count: 1;
+    }
+
+    .playlist__song-name:not(:last-child) {
+        border-bottom: 0.5px var(--gray) solid;
     }
 }
 /* download */
