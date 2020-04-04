@@ -357,6 +357,7 @@
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
+    overflow-y: hidden;
 }
 
 .singer:first-child {
@@ -373,7 +374,7 @@
 
 .singer__info {
     background-color: var(--primary-color);
-    padding-left:2.5rem;
+    padding-left: 2.5rem;
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
     position: absolute;
@@ -406,13 +407,15 @@
     font-size: 1.4rem;
 }
 
-.singer__info-social {
-    display: none;
+.singer__info {
+    transform: translateY(3.8rem);
+    transition: transform 0.25s;
 }
 
-.singer:hover .singer__info-social {
-    display: block;
+.singer:hover .singer__info {
+    transform: translateY(0);
 }
+
 
 @media screen and (max-width:992px) {
     .singer-block {
@@ -621,6 +624,7 @@
     color: var(--white);
     padding-top: 8rem;
     padding-bottom: 8rem;
+    background-attachment: fixed;
 }
 
 .founder__content {
@@ -946,6 +950,7 @@
     color: var(--white);
     text-align: center;
     padding: 7rem 0 12rem;
+    background-attachment: fixed;
 }
 .download__heading {
     font-family: var(--oswald);
