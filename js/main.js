@@ -1,6 +1,6 @@
 function fadeAndHide(callback){
-    fade();
-    setTimeout(callback,2000);
+    setTimeout(fade,2000);
+    callback();
 };
     
 function hideLoader() {
