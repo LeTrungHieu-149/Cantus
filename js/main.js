@@ -1,14 +1,14 @@
-function fadeAndHide(callback){
-    fade();
-    setTimeout(hideLoader,2000);
+function fadeAndHide(){
+    setTimeout(fade,3000);
 };
     
 function hideLoader() {
     document.querySelector(".loader").style.display="none";
 };
     
-function fade() {
+function fade(callback) {
     document.querySelector(".loader").style.opacity="0";
+    hideLoader();
 }
   
 window.onload=fadeAndHide(hideLoader);
