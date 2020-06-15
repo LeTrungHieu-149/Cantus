@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="css/main.css" type="text/css" rel=stylesheet>
+  <link href="css/reset.css" type="text/css" rel=stylesheet>
+  <link href="css/setting.css" type="text/css" rel=stylesheet>
+  <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.typekit.net/peq4ndy.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="css/all.css" type="text/css" rel=stylesheet>
+  <title>Cantus</title>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="loader">
+      <div class="loader__content">
+          <img src="images/logo.png" alt="logo">
+      </div>
+  </div>
+    <header class="header">
+      <nav class="nav">
+        <div class="menu" id="menu">
+          <div class="menu-close">
+            <i class="far fa-window-close" onclick="closeNav()"></i>
+          </div>
+          <ul class="menu__list">
+            <li class="menu__item"><a href="javascript:void(0)" class="menu__link">Events</a></li>
+            <li class="menu__item"><a href="javascript:void(0)" class="menu__link">Gallery</a></li>
+            <li class="menu__item"><a href="javascript:void(0)" class="menu__link">News</a></li>
+            <li class="menu__item"><a href="javascript:void(0)" class="menu__link">Albums</a></li>
+            <li class="menu__item"><a href="javascript:void(0)" class="menu__link">Pages</a></li>
+          </ul>
+        </div>
+        <div class="logo">
+          <a href="index.html"><img src="images/logo.png" alt=""></a>
+        </div>
+        <div class="nav__right">
+          <div class="menu-toggle" onclick="openNav()">
+            <i class="fas fa-bars"></i>
+          </div>
+          <div class="social-share-toggle" onclick="toggleNav()">
+            <i class="fas fa-share-alt"></i>
+          </div>
+          <div class="social-share nav__social-share">
+            <div class="social-share__item">
+              <a href="javascript:void(0)">
+                <img src="images/facebook-icon.png" alt="" class="social-share__item-img">
+              </a>
+              <p class="social-share__item-number">32K</p>
+            </div>
+            <div class="social-share__item">
+              <a href="javascript:void(0)">
+                <img src="images/tweet-icon.png" alt="" class="social-share__item-img">
+              </a>
+              <p class="social-share__item-number">55K</p>
+            </div>
+            <div class="social-share__item">
+              <a href="javascript:void(0)">
+                <img src="images/google-icon.png" alt="" class="social-share__item-img">
+              </a>
+              <p class="social-share__item-number">23K</p>
+            </div>
+          </div>
+          <button class="btn btn--white btn--big nav__button">Purchase ticket</button>
+        </div>
+      </nav>
+      <div class="header__content">
+        <h2 class="header__heading">
+          <span class="header__heading-top heading--oswald">Let's rock</span>
+          <br>
+          <span class="header__heading-bottom heading--greatvibe">with cantus</span>
+        </h2>
+        <button class="btn btn--big btn--red btn--center">discover more</button>
+      </div>
+    </header>
+    <section class="introducing">
+      <div class="container introducing__container">
+        <h2 class="introducing__heading">
+          <span class="section__heading-top heading--oswald">introducing</span>
+          <br>
+          <span class="section__heading-bottom heading--greatvibe">our members</span>
+        </h2>
+        <div class="move">
+          <a href="javascript:void(0)" class="prev">&#10094;</a>
+          <a href="javascript:void(0)" class="next">&#10095;</a>
+        </div>
+        <div class="singer-block">
+          <div class="singer">
+            <div class="singer__info">
+              <p class="singer__info-name">john smith</p>
+              <p class="singer__info-role">vocal</p>
+              <div class="singer__info-social">
+                <div class="social-share singer__social-share">
+                  <div class="social-share__item singer__social">
+                    <img src="images/facebook-icon.png" alt="" class="social-share__item-img singer__social-img">
+                    <p class="social-share__item-number singer__social-number">96K</p>
+                  </div>
+                  <div class="social-share__item singer__social">
+                    <img src="images/tweet-icon.png" alt="" class="social-share__item-img singer__social-img">
+                    <p class="social-share__item-number singer__social-number">32K</p>
+                  </div>
+                  <div class="social-share__item singer__social">
+                    <img src="images/google-icon.png" alt="" class="social-share__item-img singer__social-img">
+                    <p class="social-share__item-number singer__social-number">69K</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="singer">
+            <div class="singer__info">
+              <p class="singer__info-name">rendi outhor</p>
+              <p class="singer__info-role">drum</p>
+              <div class="singer__info-social">
+                <div class="social-share singer__social-share">
+                  <div class="social-share__item singer__social">
+                    <img src="images/facebook-icon.png" alt="" class="social-share__item-img singer__social-img">
+                    <p class="social-share__item-number singer__social-number">96K</p>
+                  </div>
+                  <div class="social-share__item singer__social">
+                    <img src="images/tweet-icon.png" alt="" class="social-share__item-img singer__social-img">
+                    <p class="social-share__item-number singer__social-number">32K</p>
+                  </div>
+                  <div class="social-share__item singer__social">
+                    <img src="images/google-icon.png" alt="" class="social-share__item-img singer__social-img">
+                    <p class="social-share__item-number singer__social-number">69K</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="singer">
+            <div class="singer__info">
+              <p class="singer__info-name">renes odim</p>
+              <p class="singer__info-role">guiter</p>
+              <div class="singer__info-social">
+                <div class="social-share singer__social-share">
+                  <div class="social-share__item singer__social">
+                    <img src="images/facebook-icon.png" alt="" class="social-share__item-img singer__social-img">
+                    <p class="social-share__item-number singer__social-number">96K</p>
+                  </div>
+                  <div class="social-share__item singer__social">
+                    <img src="images/tweet-icon.png" alt="" class="social-share__item-img singer__social-img">
+                    <p class="social-share__item-number singer__social-number">32K</p>
+                  </div>
+                  <div class="social-share__item singer__social">
+                    <img src="images/google-icon.png" alt="" class="social-share__item-img singer__social-img">
+                    <p class="social-share__item-number singer__social-number">69K</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="upcoming-and-latest">
+      <div class="container upcoming-and-latest__container">
+        <div class="upcoming">
+          <h2 class="upcoming__heading">
+            <span class="section__heading-top heading--oswald">upcoming</span>
+            <br>
+            <span class="section__heading-bottom heading--greatvibe">concert</span>
+          </h2>
+          <div class="upcoming__content">
+            <div class="upcoming__image">
+              <img src="images/album.jpg" alt="">
+              <p class="upcoming__date">13 Jan</p>
+            </div>
+            <div class="upcoming__info">
+              <h4 class="upcoming__info-heading">Texas Rocks nation 2016</h4>
+              <p class="upcoming__info-location">Location : 31 Great Smith Street, UK</p>
+              <p class="upcoming__info-date">Date : July 13, 2017</p>
+              <p class="upcoming__info-time">Time : 10:00 AM</p>
+              <p class="upcoming__info-price">Price : $40</p>
+              <button class="btn btn--red btn--medium upcoming__button">purchase ticket</button>
+            </div>
+          </div>
+        </div>
+        <div class="latest">
+          <h2 class="latest__heading">
+            <span class="section__heading-top heading--oswald">latest</span>
+            <br>
+            <span class="section__heading-bottom heading--greatvibe">videos</span>
+          </h2>
+          <div class="move">
+            <a href="javascript:void(0)" class="prev">&#10094;</a>
+            <a href="javascript:void(0)" class="next">&#10095;</a>
+          </div>
+          <div class="latest__video">
+            <img src="images/album-2.jpg" alt="" class="latest__img">
+            <div class="play-button">
+              <i class="fas fa-play play-icon"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="founder">
+      <div class="container founder__container">
+        <div class="founder__content">
+          <h3 class="founder__heading">
+            Our Founder staying in our hearts
+          </h3>
+          <p class="founder__desc">1982 <span class="special-word founder__special-word">cantus </span>Start jurny and now it‘s top class Rock Band in the California.</p>
+          <button class="btn--white btn btn--small">learn more</button>
+        </div>
+      </div>
+    </section>
+    <section class="popular-and-insta">
+      <div class="container popular-and-insta__container">
+        <div class="popular">
+          <h2 class="popular__heading">
+            <span class="section__heading-top heading--oswald">popular</span>
+            <br>
+            <span class="section__heading-bottom heading--greatvibe">songs</span>
+          </h2>
+          <div class="music-player">
+            <div class="music-player__image">
+              <img src="images/song.jpg" alt="" class="music-player__img">
+            </div>
+            <div class="music-player__bar">
+              <div class="music-player__top">
+                <div class="music-player__play">
+                  <img src="images/orange-play.png" alt="">
+                </div>
+                <div class="music-player__info">
+                  <div class="music-player__info-left">
+                    <p class="music-player__uploader">nineinchnails</p>
+                    <p class="music-player__song-name">1. My heart is dancing</p>
+                  </div>
+                  <div class="music-player__info-right">
+                    <p class="music-player__uploaded-time">10 months</p>
+                    <a href="javascript:void(0)" class="music-player__hashtag">#industrial</a>
+                  </div>
+                </div>
+              </div>
+              <div class="music-player__scrub">
+                <img src="images/scrub.png" alt="">
+              </div>
+              <div class="music-player__button-and-stat">
+                <div class="music-player__button">
+                  <div class="music-player__like">
+                    <a href="javascript:void(0)" class="music-player__button-item">
+                      <img src="images/heart.png" alt="">
+                      <span class="music-player__button-text">Like</span>
+                    </a>
+                  </div>
+                  <div class="music-player__repost">
+                    <a href="javascript:void(0)" class="music-player__button-item"><img src="images/repost.png" alt="">
+                      <span class="music-player__button-text">Repost</span>
+                    </a>
+                  </div>
+                  <div class="music-player__add">
+                    <a href="javascript:void(0)" class="music-player__button-item"><img src="images/add.png" alt="">
+                      <span class="music-player__button-text">Add</span>
+                    </a>
+                  </div>
+                  <div class="music-player__share">
+                    <a href="javascript:void(0)" class="music-player__button-item"><img src="images/share.png" alt="">
+                      <span class="music-player__button-text">Share</span>
+                    </a>
+                  </div>
+                </div>
+                <div class="stat-toggle" id="stat-toggle" onclick="toggleStat()">
+                  <i class="fas fa-chevron-circle-down"></i>
+                </div>
+                <div class="music-player__stat" id="music-player__stat">
+                  <div class="music-player__play-number music-player__stat-item-wrap">
+                    <a href="javascript:void(0)" class="music-player__stat-item"><img src="images/stat-play.png" alt="">
+                      <span class="music-player__stat-text">53,575</span>
+                    </a>
+                  </div>
+                  <div class="music-player__like-number  music-player__stat-item-wrap">
+                    <a href="javascript:void(0)" class="music-player__stat-item"><img src="images/stat-like.png" alt="">
+                      <span class="music-player__stat-text">816</span>
+                    </a>
+                  </div>
+                  <div class="music-player__share-number  music-player__stat-item-wrap">
+                    <a href="javascript:void(0)" class="music-player__stat-item"><img src="images/stat-share.png" alt="">
+                      <span class="music-player__stat-text">159</span>
+                    </a>
+                  </div>
+                  <div class="music-player__comment-number  music-player__stat-item-wrap">
+                    <a href="javascript:void(0)" class="music-player__stat-item"><img src="images/stat-comment.png" alt="">
+                      <span class="music-player__stat-text">69</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="playlist">
+            <p class="playlist__song-name">01. My heart is dancing</p>
+            <p class="playlist__song-name">02. Good day</p>
+            <p class="playlist__song-name">03. Life for rent</p>
+            <p class="playlist__song-name">04. Hello It’s me</p>
+            <p class="playlist__song-name">05. My heart is dancing</p>
+            <p class="playlist__song-name">06. Good day</p>
+            <p class="playlist__song-name">07. Life for rent</p>
+            <p class="playlist__song-name">08. Hello It’s me</p>
+            <p class="playlist__song-name">09. My heart is dancing</p>
+            <p class="playlist__song-name">10. Good day</p>
+            <p class="playlist__song-name">11. Life for rent</p>
+            <p class="playlist__song-name">12. Hello It’s me</p>
+          </div>
+        </div>
+        <div class="insta">
+          <h2 class="insta__heading">
+            <span class="section__heading-top heading--oswald">instagram</span>
+            <br>
+            <span class="section__heading-bottom heading--greatvibe">feed</span>
+          </h2>
+          <div class="insta__block-image">
+            <div class="insta__image">
+              <img src="images/insta-1.jpg" alt="">
+            </div>
+            <div class="insta__image">
+              <img src="images/insta-2.jpg" alt="">
+            </div>
+            <div class="insta__image">
+              <img src="images/insta-3.jpg" alt="">
+            </div>
+            <div class="insta__image">
+              <img src="images/insta-4.jpg" alt="">
+            </div>
+          </div>
+        </div>
+      </div> 
+    </section>
+    <section class="download">
+      <div class="container download__container">
+        <h2 class="download__heading">
+          Download Our Official Apps
+        </h2>
+        <p class="download__desc">
+          Never stop listening. Take your playlists and likes wherever you go.
+        </p>
+        <div class="download__button-block">
+          <a href="javascript:void(0)" class="download__button"><img src="images/download-appstore.png" alt=""></a>
+          <a href="javascript:void(0)" class="download__button"><img src="images/download-googleplay.png" alt=""></a>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="footer__container footer">
+        <div class="footer__form">
+          <input type="text" name="suscribe" placeholder="subscribe newsletter" class="footer__input">
+        </div>
+        <div class="footer__bottom">
+          <nav class="footer__nav">
+            <div class="footer-menu">
+              <ul class="footer-menu__list">
+                <li class="footer-menu__item"><a href="javascript:void(0)" class="footer-menu__link">Home</a></li>
+                <li class="footer-menu__item"><a href="javascript:void(0)" class="footer-menu__link">Events</a></li>
+                <li class="footer-menu__item"><a href="javascript:void(0)" class="footer-menu__link">Gallery</a></li>
+                <li class="footer-menu__item"><a href="javascript:void(0)" class="footer-menu__link">News</a></li>
+                <li class="footer-menu__item"><a href="javascript:void(0)" class="footer-menu__link">Albums</a></li>
+                <li class="footer-menu__item"><a href="javascript:void(0)" class="footer-menu__link">Pages</a></li>
+              </ul>
+            </div>
+          </nav>
+          <p class="footer__copyright">Copyright © 2009–2016 <span class="special-word footer__special-word">cantus </span>© their respective owners. Shipped from Salem, Mass. USA.</p>
+        </div>
+      </div>
+    </footer>
+    <script src="js/main.js"></script>
+  </div>
+</body>
+</html>
